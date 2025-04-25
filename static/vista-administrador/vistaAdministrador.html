@@ -412,46 +412,7 @@
 		});
 	</script>
 
-	<script>
-		function añadirCurso() {
-			// Crear nuevo bloque de curso
-			const h1=document.querySelector(".adicion-curso");
-			const nombreCurso = document.getElementById('Course_name').value.trim();
-    		const titulo = nombreCurso !== '' ? nombreCurso : 'Curso de capacitación de técnicos';
-
-			const descripcion_curso = document.getElementById('course_description').value.trim();
-    		const titulo2 = descripcion_curso !== '' ? descripcion_curso : 'Descripción del curso de capacitación de técnicos';
-
-			const nuevoCurso = document.createElement("div");
-			nuevoCurso.innerHTML = `
-				<div class="row">
-						<div class="col-12">
-							<div class="card">
-								<div class="row">
-									<div class="col-md-4">
-									  <a href="curso_tecnicos2.html" class="text-decoration-none text-dark">
-										<div class="card border" style="transition: box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.3)';" onmouseout="this.style.boxShadow='none';">
-										  <img src="img/photos/unsplash-1.jpg" class="card-img-top" alt="Imagen del Curso" style="max-height: 200px; object-fit: cover;">
-										  <div class="card-body">
-											<h5 class="card-title">${titulo}</h5>
-											<h6 class="card-subtitle mb-2 text-muted">Código: TEC-101</h6>
-											<p class="card-text">${titulo2}</p>
-										  </div>
-										</div>
-									  </a>
-									</div>															
-								<div class="card-body">
-								</div>
-							</div>
-						</div>
-				</div>
-			`;
-
-			nuevoCurso.classList.add("Div-code");
-			h1.appendChild(nuevoCurso);
-			document.getElementById('Course_name').value = '';
-		}
-	</script>
+	<script type="module" src="js/admin.js"></script>
 
 
 
